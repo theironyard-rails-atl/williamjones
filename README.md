@@ -1,3 +1,5 @@
-williamjones
+Will's TIY Homework
 ============
-This is a test
+Homework for TIY - ROR
+
+Each days assignments are in their own subdirectory. 
