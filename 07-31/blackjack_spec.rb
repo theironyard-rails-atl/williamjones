@@ -31,17 +31,17 @@ describe Deck do
     assert_equal @deck.cards.count, 52
   end
 
-  # it "knows how many cards are left after drawing" do
-  #   @deck.draw
-  #   assert_equal @deck.cards.count, 51
-  # end
-  #
-  # it "tracks which cards have been drawn and which remain" do
-  #   drawn_card = @deck.draw
-  #   assert_equal @deck.cards.count, 51
-  #   refute_includes @deck.cards, drawn_card
-  #   assert_includes @deck.drawn, drawn_card
-  # end
+  it "knows how many cards are left after drawing" do
+    @deck.draw
+    assert_equal @deck.cards.count, 51
+  end
+
+  it "tracks which cards have been drawn and which remain" do
+    drawn_card = @deck.draw
+    assert_equal @deck.cards.count, 51
+    refute_includes @deck.cards, drawn_card
+    assert_includes @deck.drawn, drawn_card
+  end
 end
 
 # describe Hand do

@@ -10,7 +10,7 @@ class Card
     @suit = suit
 
     if rank == :A
-      @value = 1
+      @value = 1 # :TODO figure out how to assign 11
     elsif [:J, :Q, :K].include?(rank) # If rank included in array then value is 10
       @value = 10
     else
@@ -21,9 +21,11 @@ end
 
 class Deck
   attr_accessor :cards
+  attr_accessor :drawn
 
   def initialize
     @cards = []
+    @drawn = []
 
     # 1st iteration: @cards = []
     # 2nd iteration: @cards = [Ace of Spades]
@@ -76,6 +78,14 @@ class Deck
     #     @cards.push(card)
     #   end
     # end
+
+    @cards.shuffle!
+  end
+
+  def draw
+    drawn_card = @cards.shift
+    @drawn.push(drawn_card)
+    drawn_card
   end
 
   def print_deck
