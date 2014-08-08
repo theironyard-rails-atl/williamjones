@@ -42,7 +42,7 @@ class Deck
     [:S, :H, :D, :C].each do |suit|
       [:J, :Q, :K].each do |rank| # Short hand version
         card = Card.new(rank,suit)
-        @cards.push(card)
+        @cards.push(card) # Can use << as .push
       end
       # card = Card.new(:J,suit)
       # @cards.push(card)
@@ -79,7 +79,7 @@ class Deck
     #   end
     # end
 
-    @cards.shuffle!
+    @cards.shuffle! 
   end
 
   def draw
