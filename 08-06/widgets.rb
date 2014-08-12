@@ -11,6 +11,8 @@ puts
 
 # * The total revenue and profit from all widgets sold
 puts "Total revenue of all widgets sold: "
+# tr = price * sold
+# profit = tr - cost_to_make * sold
 
 
 # * The top 10 best selling widgets
